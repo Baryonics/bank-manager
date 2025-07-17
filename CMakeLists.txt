@@ -12,3 +12,6 @@ add_subdirectory(common)
 add_subdirectory(finance_system)
 add_subdirectory(atm)
 
+target_link_libraries(atm-cli PUBLIC
+  common
+)

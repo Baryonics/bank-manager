@@ -2,3 +2,4 @@ build/
 structure.png
 function.png
 how_to_socket.md
+.cache/
