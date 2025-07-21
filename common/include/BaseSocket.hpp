@@ -4,11 +4,20 @@
 class BaseSocket 
 {
   public:
-    BaseSocket(std::string path);
-    ~BaseSocket();
+    /** Calls socket
+     *
+     */
+    BaseSocket(std::string path, bool is_listening);
 
-    void recieve();
-    void send();
+    /** Calls close
+     *
+     */
+    ~BaseSocket();
+    int createSocket();
+
+    int recieve();
+
+    int send();
 
   private:
     std::string path_;
