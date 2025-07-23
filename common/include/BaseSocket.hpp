@@ -10,12 +10,17 @@ class BaseSocket
     BaseSocket(std::string path);
 
     ~BaseSocket();
+
     int createSocket();
 
     int recieve(std::span<const std::byte> buff);
 
     int send(std::span<std::byte> buff);
 
+
+    int get_fd();
+
+    std::string get_path();
 
   private:
     std::string path_;
@@ -24,11 +29,11 @@ class BaseSocket
 
 
   protected:
-    int bind();
+    void bind();
 
-    int listen();
+    void listen();
 
     int accept();
 
-    int close();
+    void close();
 };
