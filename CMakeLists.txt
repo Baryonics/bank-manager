@@ -17,18 +17,4 @@ target_link_libraries(atm-cli PUBLIC
   common
 )
 
-
-add_executable(common_tests
-  tests/test_base_socket.cpp
-)
-
-target_link_libraries(common_tests
-  PRIVATE common Catch2::Catch2WithMain
-)
-
-
-
-include(CTest)
-include(Catch)
-catch_discover_tests(common_tests)
-
+add_subdirectory(tests)
