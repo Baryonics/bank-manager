@@ -9,7 +9,7 @@ class BaseSocket
   public:
     BaseSocket(std::string path);
 
-    ~BaseSocket();
+    virtual ~BaseSocket();
 
     int createSocket();
 
