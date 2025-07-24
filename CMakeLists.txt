@@ -12,6 +12,7 @@ add_subdirectory(common)
 add_subdirectory(finance_system)
 add_subdirectory(atm)
 add_subdirectory(lib/Catch2)
+add_subdirectory(lib/json)
 
 target_link_libraries(atm-cli PUBLIC
   common
