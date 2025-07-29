@@ -9,10 +9,13 @@ add_library(common STATIC
   src/BaseSocket.cpp
   src/ProtocolParser.cpp
   src/ProtocolMessage.cpp
+  src/AccountHolder.cpp
   include/Utils.hpp
 )
 
 target_include_directories(common PUBLIC
   include
 )
+
+target_link_libraries(common PRIVATE nlohmann_json::nlohmann_json)
 
