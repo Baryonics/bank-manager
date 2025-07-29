@@ -2,6 +2,8 @@
 
 #include "nlohmann/json.hpp"
 #include "AccountHolder.hpp"
+#include "nlohmann/json_fwd.hpp"
+
 enum class MessageType
 {
   WITHDRAW,
@@ -17,4 +19,7 @@ class ProtocolMessage {
       AccountHolder sender,
       AccountHolder rec
     );
+
+  private:
+    nlohmann::json data_;
 };

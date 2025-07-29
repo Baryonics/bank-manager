@@ -1,7 +1,6 @@
 #pragma once
 
 #include <string>
-#include <array>
 
 constexpr std::size_t ACC_NUM_LEN = 8;
 
